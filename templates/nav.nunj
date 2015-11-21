@@ -1,0 +1,26 @@
+<div class="top-bar">
+	<div class="container">
+		<ul class="dropdown menu" data-dropdown-menu>
+			<li class="menu-text">
+				<a href="/" class="ajax-link">
+					Pickaday!
+				</a>
+			</li>
+			<li>
+				<a href="/events/create" class="menu-link ajax-link{% if route == 'events/create' %} menu-link-active{% endif %}">
+					Add event
+				</a>
+			</li>
+			<li>
+				<a href="/" class="menu-link ajax-link{% if not route %} menu-link-active{% endif %}">
+					All events list
+				</a>
+			</li>
+			<li>
+				<a href="/about" class="menu-link ajax-link{% if route == 'about' %} menu-link-active{% endif %}">
+					About
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>

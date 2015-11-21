@@ -41,20 +41,28 @@ h6 {
 	margin-bottom: 20px;
 }
 
-.choice-table {
+.edit-table {
 	text-align: center;
 	vertical-align: middle;
 }
 
-.choice-table td {
+.edit-table td {
 	padding-top: 4px;
 	padding-bottom: 4px;
 }
 
-.choice-table td:first-child {
+.edit-table td:first-child {
 	text-align: left;
 }
 
-.choice-table [type=checkbox] {
+.edit-table [type=checkbox] {
 	margin-bottom: 0;
+}
+
+.menu-link {
+	border-bottom: 3px solid transparent;
+}
+
+.menu-link-active {
+	border-bottom-color: currentColor;
 }

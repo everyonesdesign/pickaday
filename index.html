@@ -6,25 +6,16 @@
 	<script type="text/javascript" src="frontend/gen/index.js"></script>
 </head>
 <body>
-	<div class="top-bar">
-		<div class="container">
-			<ul class="dropdown menu" data-dropdown-menu>
-				<li class="menu-text">Pickaday!</li>
-				<li><a href="#">Add event</a></li>
-				<li><a href="#">View events</a></li>
-				<li><a href="#">About</a></li>
-			</ul>
-		</div>
-	</div>
+	<div id="nav"></div>
 
-	<div class="choice">
+	<div class="edit">
 		<div class="container">
 			<h1>Choose your available time</h1>
 
 			<div class="callout">
 				<p>Which time can you participate?</p>
 
-				<table class="choice-table">
+				<table class="edit-table">
 					<tr>
 						<th></th>
 						<th>Monday</th>
@@ -277,7 +268,7 @@
 					</tr>
 				</table>
 
-				<div class="choice-actions">
+				<div class="edit-actions">
 					<a href="#" class="button success">Save</a>
 					<a href="#" class="button">Cancel</a>
 				</div>
@@ -326,7 +317,7 @@
 
 			<div class="callout">
 				<div class="list-actions">
-					<a href="#" class="button">Add new</a>
+					<a href="/events/create" class="button ajax-link">Add new</a>
 				</div>
 
 				<table class="list-table">
@@ -336,14 +327,14 @@
 						<th>Date added</th>
 					</tr>
 					<tr>
-						<td><a href="#">Birthday</a></td>
+						<td><a href="/events/1" class="ajax-link">Birthday</a></td>
 						<td>John Doe, Diana Williamson, David Lewson</td>
 						<td>12.11.2015</td>
+						<td><a href="/events/1/edit" class="ajax-link">Edit</a></td>
 					</tr>
 				</table>
 			</div>
 		</div>
 	</div>
-
 </body>
 </html>

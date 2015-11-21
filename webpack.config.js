@@ -17,8 +17,15 @@ module.exports = {
 			{
 				test: /\.css$/,
 				loader: 'style-loader!css-loader!postcss-loader'
+			},
+			{
+				test: /\.(nunj|nunjucks)$/,
+				loader: 'nunjucks-loader'
 			}
 		]
+	},
+	resolve: {
+		modulesDirectories: [ 'web_modules', 'node_modules', '.' ]
 	},
 	postcss: function () {
 		return [autoprefixer];
