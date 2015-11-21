@@ -21,6 +21,7 @@
     "webpack": "^1.12.8"
   },
   "dependencies": {
-    "foundation-sites": "^6.0.3"
+    "foundation-sites": "^6.0.3",
+    "normalize.css": "^3.0.3"
   }
 }
