@@ -1,10 +1,8 @@
 const Backbone = require('backbone');
 const View = Backbone.View;
-const Router = Backbone.Router;
 
 const nunjucks = require('nunjucks/browser/nunjucks');
 const app = require('../app');
-const q = require('queried');
 
 const NavView = View.extend({
 	initialize() {
