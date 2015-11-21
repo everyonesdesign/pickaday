@@ -1,0 +1,34 @@
+<div class="preview">
+	<div class="container">
+		<h1>Birthday</h1>
+
+		<div class="callout">
+			<div class="preview-actions">
+				<a href="#" class="button">Edit</a>
+				<a href="#" class="button alert">Delete</a>
+			</div>
+
+			<h3>Tuesday</h3>
+			<table class="preview-table">
+				<tr>
+					<th></th>
+					<th>John Doe</th>
+					<th>Diana Williamson</th>
+					<th>David Lewson</th>
+				</tr>
+				<tr>
+					<td>8:00</td>
+					<td>yes</td>
+					<td>no</td>
+					<td>no</td>
+				</tr>
+				<tr>
+					<td>9:00</td>
+					<td>yes</td>
+					<td>no</td>
+					<td>no</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>

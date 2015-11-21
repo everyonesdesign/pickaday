@@ -1,4 +1,10 @@
 const Router = require('backbone').Router;
+const app = require('app');
+const utils = require('./utils');
+
+const EditView = require('./views/edit');
+const ListView = require('./views/list');
+const PreviewView = require('./views/preview');
 
 module.exports = Router.extend({
 	routes: {
@@ -12,7 +18,22 @@ module.exports = Router.extend({
 		'events/:id':       'preview',
 	},
 
-	list: function () {
+	list() {
+		this.removeCurrentView();
+		app.contentView = new ListView({el: '#content'});
+	},
 
+	edit() {
+		this.removeCurrentView();
+		app.contentView = new EditView({el: '#content'});
+	},
+
+	preview() {
+		this.removeCurrentView();
+		app.contentView = new PreviewView({el: '#content'});
+	},
+
+	removeCurrentView() {
+		app.contentView && utils.killView(app.contentView);
 	},
 });

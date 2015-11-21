@@ -1,0 +1,25 @@
+<div class="list">
+	<div class="container">
+		<h1>Events list</h1>
+
+		<div class="callout">
+			<div class="list-actions">
+				<a href="/events/create" class="button ajax-link">Add new</a>
+			</div>
+
+			<table class="list-table">
+				<tr>
+					<th>Title</th>
+					<th>Participants</th>
+					<th>Date added</th>
+				</tr>
+				<tr>
+					<td><a href="/events/1" class="ajax-link">Birthday</a></td>
+					<td>John Doe, Diana Williamson, David Lewson</td>
+					<td>12.11.2015</td>
+					<td><a href="/events/1/edit" class="ajax-link">Edit</a></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
