@@ -1,10 +1,9 @@
 const Backbone = require('backbone');
-const AjaxifiedView = require('./ajaxified');
-
+const View = require('backbone').View;
 const nunjucks = require('nunjucks/browser/nunjucks');
 const app = require('../app');
 
-const NavView = AjaxifiedView.extend({
+const NavView = View.extend({
 	initialize() {
 		this.render();
 		app.router.on('route', () => this.render());

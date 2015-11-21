@@ -1,16 +1,16 @@
 const View = require('backbone').View;
 const nunjucks = require('nunjucks/browser/nunjucks');
 
-const PreviewView = View.extend({
+const AddView = View.extend({
 	initialize() {
 		this.render();
 	},
 
-	template: require('templates/preview.nunj'),
+	template: require('templates/add.nunj'),
 
 	render() {
 		this.el.innerHTML = this.template.render();
 	},
 });
 
-module.exports = PreviewView;
+module.exports = AddView;

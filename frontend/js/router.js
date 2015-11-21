@@ -28,6 +28,11 @@ module.exports = Router.extend({
 		app.contentView = new ListView({el: '#content'});
 	},
 
+	add() {
+		this.removeCurrentView();
+		app.contentView = new AddView({el: '#content'});
+	},
+
 	edit() {
 		this.removeCurrentView();
 		app.contentView = new EditView({el: '#content'});

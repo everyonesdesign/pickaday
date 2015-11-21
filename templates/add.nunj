@@ -1,0 +1,7 @@
+<div class="add">
+	<div class="container">
+		<h1>Pick a name:</h1>
+		<input type="text">
+		<a href="/events/1" class="button success">Save</a>
+	</div>
+</div>

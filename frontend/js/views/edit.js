@@ -1,5 +1,4 @@
 const View = require('backbone').View;
-
 const nunjucks = require('nunjucks/browser/nunjucks');
 
 const EditView = View.extend({
