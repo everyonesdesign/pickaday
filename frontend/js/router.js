@@ -6,6 +6,7 @@ const EditView = require('./views/edit');
 const ListView = require('./views/list');
 const PreviewView = require('./views/preview');
 const AboutView = require('./views/about');
+const CreateView = require('./views/create');
 
 module.exports = Router.extend({
 	routes: {
@@ -14,7 +15,7 @@ module.exports = Router.extend({
 
 		'about':            'about',
 
-		'events/add':       'add',
+		'events/create':       'create',
 		'events/:id/edit':  'edit',
 		'events/:id':       'preview',
 	},
@@ -28,9 +29,9 @@ module.exports = Router.extend({
 		app.contentView = new ListView({el: '#content'});
 	},
 
-	add() {
+	create() {
 		this.removeCurrentView();
-		app.contentView = new AddView({el: '#content'});
+		app.contentView = new CreateView({el: '#content'});
 	},
 
 	edit() {
