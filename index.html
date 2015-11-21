@@ -8,20 +8,12 @@
 <body>
 	<div class="top-bar">
 		<div class="container">
-			<div class="top-bar-left">
-				<ul class="dropdown menu" data-dropdown-menu>
-					<li class="menu-text">Pickaday!</li>
-					<li><a href="#">Add event</a></li>
-					<li><a href="#">View events</a></li>
-					<li><a href="#">About</a></li>
-				</ul>
-			</div>
-			<div class="top-bar-right">
-				<ul class="menu">
-					<li><input type="search" placeholder="Search"></li>
-					<li><button type="button" class="button">Search</button></li>
-				</ul>
-			</div>
+			<ul class="dropdown menu" data-dropdown-menu>
+				<li class="menu-text">Pickaday!</li>
+				<li><a href="#">Add event</a></li>
+				<li><a href="#">View events</a></li>
+				<li><a href="#">About</a></li>
+			</ul>
 		</div>
 	</div>
 
@@ -32,7 +24,7 @@
 			<div class="callout">
 				<p>Which time can you participate?</p>
 
-				<table class="choiceTable">
+				<table class="choice-table">
 					<tr>
 						<th></th>
 						<th>Monday</th>
@@ -284,6 +276,11 @@
 						<td><input type="checkbox"></td>
 					</tr>
 				</table>
+
+				<div class="choice-actions">
+					<a href="#" class="button success">Save</a>
+					<a href="#" class="button">Cancel</a>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -293,6 +290,11 @@
 			<h1>Birthday</h1>
 
 			<div class="callout">
+				<div class="preview-actions">
+					<a href="#" class="button">Edit</a>
+					<a href="#" class="button alert">Delete</a>
+				</div>
+
 				<h3>Tuesday</h3>
 				<table class="preview-table">
 					<tr>
@@ -323,6 +325,10 @@
 			<h1>Events list</h1>
 
 			<div class="callout">
+				<div class="list-actions">
+					<a href="#" class="button">Add new</a>
+				</div>
+
 				<table class="list-table">
 					<tr>
 						<th>Title</th>

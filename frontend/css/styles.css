@@ -41,20 +41,20 @@ h6 {
 	margin-bottom: 20px;
 }
 
-.choiceTable {
+.choice-table {
 	text-align: center;
 	vertical-align: middle;
 }
 
-.choiceTable td {
+.choice-table td {
 	padding-top: 4px;
 	padding-bottom: 4px;
 }
 
-.choiceTable td:first-child {
+.choice-table td:first-child {
 	text-align: left;
 }
 
-.choiceTable [type=checkbox] {
+.choice-table [type=checkbox] {
 	margin-bottom: 0;
 }
