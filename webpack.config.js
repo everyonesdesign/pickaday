@@ -1,0 +1,26 @@
+var autoprefixer = require('autoprefixer');
+var path = require('path');
+
+module.exports = {
+	entry: './frontend/js/index',
+	output: {
+		path: __dirname+'/frontend/gen/',
+		filename: 'index.js'
+	},
+	module: {
+		loaders: [
+			{
+				test: /\.jsx?$/,
+				exclude: /(node_modules|bower_components)/,
+				loader: 'babel'
+			},
+			{
+				test: /\.css$/,
+				loader: 'style-loader!css-loader!postcss-loader'
+			}
+		]
+	},
+	postcss: function () {
+		return [autoprefixer];
+	}
+};
