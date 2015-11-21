@@ -1,8 +1,8 @@
-const View = require('backbone').View;
+const AjaxifiedView = require('./ajaxified');
 
 const nunjucks = require('nunjucks/browser/nunjucks');
 
-const PreviewView = View.extend({
+const PreviewView = AjaxifiedView.extend({
 	initialize() {
 		this.render();
 	},

@@ -1,30 +1,16 @@
 const Backbone = require('backbone');
-const View = Backbone.View;
+const AjaxifiedView = require('./ajaxified');
 
 const nunjucks = require('nunjucks/browser/nunjucks');
 const app = require('../app');
 
-const NavView = View.extend({
+const NavView = AjaxifiedView.extend({
 	initialize() {
 		this.render();
 		app.router.on('route', () => this.render());
 	},
 
 	template: require('templates/nav.nunj'),
-
-	events: {
-		'click .ajax-link': 'handleNavAction',
-	},
-
-	handleNavAction(e) {
-		e.preventDefault();
-		const link = e.target;
-		const url = link.getAttribute('href');
-
-		app.router.navigate(url, {
-			trigger: true,
-		});
-	},
 
 	render() {
 		// get current route

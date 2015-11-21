@@ -4,8 +4,8 @@
 
 		<div class="callout">
 			<div class="preview-actions">
-				<a href="#" class="button">Edit</a>
-				<a href="#" class="button alert">Delete</a>
+				<a href="/events/1/edit" class="button ajax-link">Edit</a>
+				<a href="/events/1/delete" class="button alert">Delete</a>
 			</div>
 
 			<h3>Tuesday</h3>
