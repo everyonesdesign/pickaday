@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Pickaday!</title>
-	<script type="text/javascript" src="frontend/gen/index.js"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='gen/index.js') }}"></script>
 </head>
 <body>
 	<div id="nav"></div>
