@@ -1,5 +1,10 @@
+const noop = () => {};
+
 const jqueryStub =  function(el) {
-	return [require('queried')(el)];
+	const $el = [require('queried')(el)];
+	$el.on = noop;
+	$el.off = noop;
+	return $el;
 };
 
 jqueryStub.ajax = require('component-ajax');

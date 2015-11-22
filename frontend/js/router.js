@@ -9,6 +9,7 @@ const AboutView = require('./views/about');
 const CreateView = require('./views/create');
 
 const Event = require('./models/event');
+const EventCollection = require('./collections/event');
 
 module.exports = Router.extend({
 	routes: {
@@ -27,8 +28,14 @@ module.exports = Router.extend({
 	*/
 
 	list() {
+		const collection = new EventCollection;
+		collection.fetch();
+
 		this.removeCurrentView();
-		app.contentView = new ListView({el: '#content'});
+		app.contentView = new ListView({
+			el: '#content',
+			collection,
+		});
 	},
 
 	create() {

@@ -6,18 +6,24 @@
 			<a href="/events/create" class="button ajax-link">Add new</a>
 		</div>
 
-		<table class="list-table">
-			<tr>
-				<th>Title</th>
-				<th>Participants</th>
-				<th>Date added</th>
-			</tr>
-			<tr>
-				<td><a href="/events/1" class="ajax-link">Birthday</a></td>
-				<td>John Doe, Diana Williamson, David Lewson</td>
-				<td>12.11.2015</td>
-				<td><a href="/events/1/edit" class="ajax-link">Edit</a></td>
-			</tr>
-		</table>
+		{% if events and events.length %}
+			<table class="list-table">
+				<tr>
+					<th>Title</th>
+					<th>Participants</th>
+					<th>Date added</th>
+				</tr>
+				{% for event in events %}
+					<tr>
+						<td><a href="/events/{{ event.id }}" class="ajax-link">{{ event.title }}</a></td>
+						<td>John Doe, Diana Williamson, David Lewson</td>
+						<td>12.11.2015</td>
+						<td><a href="/events/{{ event.id }}/edit" class="ajax-link">Edit</a></td>
+					</tr>
+				{% endfor %}
+			</table>
+		{% else %}
+			<p>Loading...</p>
+		{% endif %}
 	</div>
 </div>
