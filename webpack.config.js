@@ -25,7 +25,10 @@ module.exports = {
 		]
 	},
 	resolve: {
-		modulesDirectories: [ 'web_modules', 'node_modules', '.' ]
+		modulesDirectories: [ 'web_modules', 'node_modules', '.' ],
+		alias: {
+			'jquery': 'jquery-stub'
+		}
 	},
 	postcss: function () {
 		return [autoprefixer];
