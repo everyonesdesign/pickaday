@@ -27,7 +27,8 @@ module.exports = {
 	resolve: {
 		modulesDirectories: [ 'web_modules', 'node_modules', '.' ],
 		alias: {
-			'jquery': 'jquery-stub'
+			'jquery': 'frontend/js/jquery-stub',
+			'type': 'type-of'
 		}
 	},
 	postcss: function () {

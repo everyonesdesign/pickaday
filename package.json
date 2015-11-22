@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "backbone": "^1.2.3",
+    "component-ajax": "0.0.2",
     "domready": "^1.0.8",
     "foundation-sites": "^6.0.3",
     "normalize.css": "^3.0.3",
