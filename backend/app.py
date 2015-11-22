@@ -7,7 +7,15 @@ app = Flask(
 
 @app.route("/")
 def index():
-    return render_template('index.nunj')
+	return render_template('index.nunj')
+
+@app.route("/events/<int:event_id>")
+def get_event(event_id):
+	event = {
+		'title': 'Event 1',
+	}
+	return jsonify(**event)
 
 if __name__ == "__main__":
-    app.run()
+	app.debug = True
+	app.run()

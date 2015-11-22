@@ -8,6 +8,8 @@ const PreviewView = require('./views/preview');
 const AboutView = require('./views/about');
 const CreateView = require('./views/create');
 
+const Event = require('./models/event');
+
 module.exports = Router.extend({
 	routes: {
 		'':                 'list',
@@ -39,9 +41,15 @@ module.exports = Router.extend({
 		app.contentView = new EditView({el: '#content'});
 	},
 
-	preview() {
+	preview(id) {
+		const event = new Event({id});
+		event.fetch();
+
 		this.removeCurrentView();
-		app.contentView = new PreviewView({el: '#content'});
+		app.contentView = new PreviewView({
+			el: '#content',
+			model: event,
+		});
 	},
 
 	about() {
